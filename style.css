@@ -1,0 +1,107 @@
+@import url('https://cdn.tailwindcss.com');
+
+/* Tailwind custom colors set via JS in script.js */
+
+.floating-buttons {
+  @apply fixed bottom-6 right-6 flex flex-col gap-3 z-50;
+}
+
+.call-btn {
+  @apply bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg;
+}
+
+.mail-btn {
+  @apply bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg;
+}
+
+.insta-btn {
+  @apply bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg;
+}
+
+.navbar {
+  @apply sticky top-0 z-40 bg-schoolBlue text-white shadow;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 py-3 flex justify-between items-center;
+}
+
+.logo {
+  @apply h-10 w-10;
+}
+
+.title {
+  @apply text-xl font-bold;
+}
+
+.nav-links {
+  @apply space-x-4 hidden md:block;
+}
+
+.hero {
+  @apply bg-gradient-to-r from-blue-100 to-green-100 py-20;
+}
+
+.hero-content {
+  @apply max-w-5xl mx-auto text-center px-4;
+}
+
+.logo-bounce {
+  @apply mx-auto w-28 mb-4 animate-bounce;
+}
+
+.hero-title {
+  @apply text-5xl font-extrabold mb-2 text-schoolBlue drop-shadow;
+}
+
+.hero-subtitle {
+  @apply text-xl text-gray-700 italic mb-2;
+}
+
+.hero-description {
+  @apply mb-4 text-lg;
+}
+
+.school-photo {
+  @apply rounded-2xl shadow-2xl mx-auto mt-6 max-h-[400px] object-cover;
+}
+
+.section {
+  @apply py-16;
+}
+
+.section-content {
+  @apply max-w-5xl mx-auto text-center px-4;
+}
+
+.section-title {
+  @apply text-3xl font-bold mb-4;
+}
+
+.section-title.red {
+  @apply text-schoolRed;
+}
+
+.section-title.green {
+  @apply text-schoolGreen mb-8;
+}
+
+.subheading {
+  @apply text-xl font-semibold mb-2;
+}
+
+.list {
+  @apply list-disc list-inside text-gray-700;
+}
+
+.section-text {
+  @apply text-lg text-gray-700 leading-relaxed;
+}
+
+.grid {
+  @apply md:grid-cols-2 gap-8 grid;
+}
+
+.footer {
+  @apply bg-schoolBlue text-white text-center py-4;
+}
