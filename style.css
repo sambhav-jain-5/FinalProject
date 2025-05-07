@@ -1,107 +1,127 @@
-@import url('https://cdn.tailwindcss.com');
-
-/* Tailwind custom colors set via JS in script.js */
-
-.floating-buttons {
-  @apply fixed bottom-6 right-6 flex flex-col gap-3 z-50;
-}
-
-.call-btn {
-  @apply bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg;
-}
-
-.mail-btn {
-  @apply bg-red-600 hover:bg-red-700 text-white p-3 rounded-full shadow-lg;
-}
-
-.insta-btn {
-  @apply bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full shadow-lg;
-}
-
-.navbar {
-  @apply sticky top-0 z-40 bg-schoolBlue text-white shadow;
-}
-
-.container {
-  @apply max-w-7xl mx-auto px-4 py-3 flex justify-between items-center;
-}
-
-.logo {
-  @apply h-10 w-10;
-}
-
-.title {
-  @apply text-xl font-bold;
-}
-
-.nav-links {
-  @apply space-x-4 hidden md:block;
-}
-
-.hero {
-  @apply bg-gradient-to-r from-blue-100 to-green-100 py-20;
-}
-
-.hero-content {
-  @apply max-w-5xl mx-auto text-center px-4;
-}
-
-.logo-bounce {
-  @apply mx-auto w-28 mb-4 animate-bounce;
-}
-
-.hero-title {
-  @apply text-5xl font-extrabold mb-2 text-schoolBlue drop-shadow;
-}
-
-.hero-subtitle {
-  @apply text-xl text-gray-700 italic mb-2;
-}
-
-.hero-description {
-  @apply mb-4 text-lg;
-}
-
-.school-photo {
-  @apply rounded-2xl shadow-2xl mx-auto mt-6 max-h-[400px] object-cover;
-}
-
-.section {
-  @apply py-16;
-}
-
-.section-content {
-  @apply max-w-5xl mx-auto text-center px-4;
-}
-
-.section-title {
-  @apply text-3xl font-bold mb-4;
-}
-
-.section-title.red {
-  @apply text-schoolRed;
-}
-
-.section-title.green {
-  @apply text-schoolGreen mb-8;
-}
-
-.subheading {
-  @apply text-xl font-semibold mb-2;
-}
-
-.list {
-  @apply list-disc list-inside text-gray-700;
-}
-
-.section-text {
-  @apply text-lg text-gray-700 leading-relaxed;
-}
-
-.grid {
-  @apply md:grid-cols-2 gap-8 grid;
-}
-
-.footer {
-  @apply bg-schoolBlue text-white text-center py-4;
-}
+:root {
+    --bg-dark: #121212;
+    --bg-card: #1f1f1f;
+    --accent: #f4a261;
+    --accent-dark: #e76f51;
+    --text: #e0e0e0;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  
+  header {
+    background: var(--bg-dark);
+    border-bottom: 1px solid #2a2a2a;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .profile-img {
+    width: 100px;
+    border-radius: 10px;
+    border: 3px solid var(--accent);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin: 0;
+  }
+  
+  .subtitle {
+    color: #bbb;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  nav.nav {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  
+  nav.nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  nav.nav a:hover {
+    color: var(--accent);
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card h3 {
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  ul {
+    padding-left: 1.2rem;
+  }
+  
+  .bullets li::marker {
+    color: var(--accent);
+  }
+  
+  a {
+    color: var(--accent);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #2a2a2a;
+    font-size: 0.9rem;
+    color: #999;
+  }
+  
